@@ -208,15 +208,16 @@
 
       <!-- coupon section -->
       <section class="container mx-auto">
+        <!-- coupon -->
         <div class="block lg:flex mt-24 gap-6 justify-center">
           <!-- new15 coupon -->
           <div class="card card-side bg-[#FFBF0F]">
             <div class="card-body font-inter my-6">
               <h2 class="font-black text-xl lg:text-3xl">
                 15% off <br />
-                <span class="font-semibold text-sm lg:text-xl"
-                  >on your next purchase</span
-                >
+                <span class="font-semibold text-sm lg:text-xl">
+                  on your next purchase
+                </span>
               </h2>
               <p>use by June 2024</p>
             </div>
@@ -229,8 +230,8 @@
             </div>
           </div>
 
-          <!-- couple coupon -->
-          <div class="card card-side bg-[#FFBF0F] my-6">
+          <!-- couple 20 coupon -->
+          <div class="card card-side bg-[#FFBF0F] my-6 lg:my-0">
             <div class="card-body font-inter my-6">
               <h2 class="font-black text-x; lg:text-3xl">
                 20% off <br />
@@ -249,6 +250,8 @@
             </div>
           </div>
         </div>
+
+        <!-- button -->
         <div class="my-10">
           <button
             class="btn btn-outline btn-success block mx-auto font-bold text-xl"
@@ -258,8 +261,87 @@
         </div>
       </section>
 
-      <!-- Ph info -->
-      <section></section>
+      <!-- Ph info and ticketing interface -->
+      <section class="container mx-auto bg-[#F7F8F8]">
+        <!-- heading -->
+        <div class="pt-10">
+          <h1 class="font-bold text-xl text-center lg:text-3xl">
+            PH Paribahan
+          </h1>
+          <p class="text-center font-inter my-4">
+            PH Paribahan, one of the leading bus service, is giving you best
+            travel experience. <br />
+            Our motto is drive safe be safe.
+          </p>
+        </div>
+
+        <div class="flex bg-white">
+          <!-- title, seat, info -->
+          <div class="p-4 w-3/4">
+            <!-- title + seat left -->
+            <div class="flex justify-between">
+              <!-- title -->
+              <div class="flex py-6">
+                <img src="./images/bus-logo.png" alt="" />
+                <div class="mx-4">
+                  <p class="font-bold text-lg lg:text-2xl">PH Paribahan</p>
+                  <p>Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <!--  seat left -->
+              <p
+                class="h-12 flex items-center px-5 my-6 bg-amber-100 font-inter font-medium text-[#1DD100]"
+              >
+                <img src="./images/seat-green.png" alt="" /><span class="ml-2"
+                  >40</span
+                >
+                seats left
+              </p>
+            </div>
+
+            <!-- info -->
+            <div class="bg-[#F7F8F8] rounded-t-xl p-4 mt-4">
+              <div class="flex justify-between border-b border-dashed my-6">
+                <p class="font-semibold text-[#03071299]">Route</p>
+                <p class="font-semibold text-[#03071299]">Dhaka - Sylhet</p>
+              </div>
+              <div class="flex justify-between border-b border-dashed my-6">
+                <p class="font-semibold text-[#03071299]">Departure Time</p>
+                <p class="font-semibold text-[#03071299]">9.00 PM</p>
+              </div>
+              <div class="flex justify-between my-6">
+                <button
+                  class="btn bg-[#0307120D] font-medium font-inter text-[#030712CC]"
+                >
+                  Boarding Point - Laxmipur
+                </button>
+                <button
+                  class="btn bg-[#0307120D] font-medium font-inter text-[#030712CC]"
+                >
+                  Dropping Point - Bogura
+                </button>
+                <button
+                  class="btn bg-[#0307120D] font-medium font-inter text-[#030712CC]"
+                >
+                  Est. Time - 11 Hour
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- divider -->
+          <div class="">
+            <img class="" src="./images/info-devider.png" alt="" />
+          </div>
+
+          <!-- price -->
+          <div class="flex flex-col justify-center items-center w-1/4">
+            <img src="./images/fare.png" alt="fare" class="block" />
+            <p class="text-3xl font-bold"><span>550</span> Taka</p>
+            <p class="text-xl font-semibold">Per seat</p>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
