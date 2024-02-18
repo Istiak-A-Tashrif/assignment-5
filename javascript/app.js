@@ -76,7 +76,7 @@ coupon.addEventListener("keyup", function () {
   
         table.appendChild(tr);
       });
-    } else if (coupon.value === "COUPLE 20") {
+    } else if (coupon.value === "Couple 20") {
       applyButton.removeAttribute("disabled");
       applyButton.addEventListener("click", function () {
 
