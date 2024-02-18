@@ -15,8 +15,12 @@
     
     <!-- font import -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+      .font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
       .font-inter {
         font-family: "Inter", sans-serif;
       }
@@ -116,11 +120,13 @@
               >we have AC and Chair-Coach both. You will like us</span
             >
           </p>
-          <button
+          <a href="#ticket-info" id="scroll-btn" >
+            <button
             class="block btn h-10 min-h-10 lg:h-[3rem] lg:max-h-[3rem] bg-lime-500 mx-auto"
           >
             Buy Tickets
           </button>
+          </a>
 
           <!-- statistics cards -->
           <div class="hidden lg:flex justify-evenly relative top-40">
@@ -257,7 +263,7 @@
       </section>
 
       <!-- Ph ticket info-->
-      <section class="container mx-auto bg-[#F7F8F8]">
+      <section id="ticket-info" class="container mx-auto bg-[#F7F8F8]">
         <!-- heading -->
         <div class="pt-10">
           <h1 class="font-bold text-xl text-center lg:text-3xl">
@@ -342,7 +348,7 @@
       <section class="container mx-auto">
         <div class="p-4 block lg:grid grid-cols-3 my-10">
           <!-- seat buttons -->
-          <div class="col-span-2 w-3/4 space-y-6">
+          <div class="col-span-2 w-full lg:w-[90%] space-y-6">
             <!-- select seat -->
             <div>
               <p class="font-bold text-lg lg:text-xl">Select Your Seat</p>
@@ -500,7 +506,7 @@
             </div>
           </div>
 
-          <!-- form and pricingv table -->
+          <!-- form and pricing table -->
           <div class=" w-full">
             <div class="mt-9 lg:mt-0
             ">
@@ -532,7 +538,7 @@
                   <tfoot class="border-t-2">
                     <tr>
                       <th class="font-medium text-black text-base">
-                        Total Price
+                        Total
                       </th>
                       <th class="font-medium text-black text-base"></th>
                       <th class="font-medium text-black text-base">
@@ -544,14 +550,14 @@
 
                 <!-- coupon input -->
                 <label
-                  class="input input-bordered flex items-center gap-2 w-4/5 mx-auto mr-10 my-6"
+                  class="input input-bordere flex items-center gap-2  lg:w-4/5 mx-auto lg:mr-10 my-6"
                 >
                   <input
                     type="text"
                     class="grow"
                     placeholder="Have any coupon?"
                   />
-                  <button class="btn bg-lime-500 min-h-8 h-8 ">Apply</button>
+                  <button class="btn relative lg:inline right-11 bg-lime-500 min-h-8 h-8 ">Apply</button>
                 </label>
 
                 <!-- grand total -->
@@ -575,37 +581,57 @@
 
             <!-- form -->
             <div class="">
-              <!-- name -->
-              <label for="name"><span class="font-inter font-semibold text-black">Passanger's Name*</span> 
-                
-                <br><br> 
-                
-                <input required type="text" placeholder="Enter Your Name" class="input input-bordered input-md  w-full max-w-xs" /> </label>
-             
-              <br><br>
-            <!-- number -->
-              <label for="number"><span class="font-inter font-semibold text-black">Phone Number*</span> 
-              
-              <br><br> 
-              
-              <input required type="number" placeholder="Enter Your Phone Number" class="input input-bordered input-md w-full max-w-xs" /> </label>
-              
-              <br><br>
-              <!-- email -->
-              <label for="email"><span class="font-inter font-semibold text-black ">Email ID</span> 
-                  
-                  <br><br> 
-                  
-                  <input type="text" placeholder="Enter Your Name" class="input input-bordered input-md w-full max-w-xs" /> </label>
-
-                  <br><br>
-
-                  <!-- button -->
-                  <button class="btn bg-lime-500 w-full">Next</button>
+              <div class="flex-col lg:flex-row-reverse">
+                <div class="card shrink-0 w-full max-w-sm">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="font-inter font-semibold text-black">Passenger's Name*</span>
+                      </label>
+                      <input type="text" placeholder="Enter Your Name" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="font-inter font-semibold text-black">Phone Number*</span>
+                      </label>
+                      <input type="number" placeholder="Enter Your Phone Number" class="input input-bordered" required />
+                      <label class="label">
+                        <span class="font-inter font-semibold text-black ">Email ID</span>
+                      </label>
+                      <input type="email" placeholder="Enter Your Email" class="input input-bordered" />
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn bg-lime-500 text-white">Next</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
+
             <div class="space-x-5 flex justify-center my-8">
               <a class="underline text-blue-300" href="">Terms and Conditions</a>
               <a class="underline text-blue-300" href="">Cancellation Policy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- congrats sec -->
+      <section class="h-screen w-screen flex justify-center items-center bg-[#F2F1F1] font-roboto hidden">
+        <div class="card w-96 bg-white shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/success.png" alt="Success" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-green-600">Success</h2>
+            <p class="text-lg font-medium text-[#4A4A4A] ">Thank you for Choosing us. <br> 
+              We are working hard to find the best service and deals for you. 
+              <span class="font-light block">
+                Shortly you will find a confirmation in your email. 
+              </span>
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
@@ -639,5 +665,18 @@
         </nav>
       </div>
     </footer>
+
+    <script>
+      document.getElementById('scroll-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const topPos = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        
+        setTimeout(() => {
+          window.scrollTo({ top: topPos, behavior: 'smooth' });
+        }, 100);
+      });
+      </script>
   </body>
 </html>
