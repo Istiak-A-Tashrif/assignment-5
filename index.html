@@ -31,8 +31,9 @@
       .font-raleway {
         font-family: "Raleway", sans-serif;
       }
-      .selected {  
-        pointer-events: none; }
+      .selected {
+        pointer-events: none;
+      }
     </style>
   </head>
   <body class="font-raleway">
@@ -574,9 +575,7 @@
                       <th class="font-medium text-black text-base">Price</th>
                     </tr>
                   </thead>
-                  <tbody id="pricing-table">
-
-                  </tbody>
+                  <tbody id="pricing-table"></tbody>
 
                   <tfoot class="border-t-2">
                     <tr>
@@ -590,7 +589,8 @@
                 </table>
 
                 <!-- coupon input -->
-                <label id="coupon-input"
+                <label
+                  id="coupon-input"
                   class="input input-bordere flex items-center gap-2 lg:w-4/5 mx-auto lg:mr-10 my-6"
                 >
                   <input
@@ -611,11 +611,13 @@
                 <div class="overflow-x-auto">
                   <table class="table font-inter">
                     <thead>
-                      <tr>
+                      <tr class="space-x-4">
                         <th class="font-medium text-black text-base">
                           Grand Total
                         </th>
-                        <th></th>
+                        <th>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </th>
                         <th class="font-medium text-black text-base">
                           BDT <span id="grand-total">0</span>
                         </th>
@@ -638,7 +640,8 @@
                     </label>
                     <input
                       type="text"
-                      placeholder="Enter Your Name" id="name"
+                      placeholder="Enter Your Name"
+                      id="name"
                       class="input input-bordered"
                       required
                     />
@@ -687,28 +690,37 @@
       </section>
 
       <!-- congrats sec -->
-    <section id="congrats"
-    class="h-screen w-screen bg-[#F2F1F1] font-roboto fixed top-0 hidden"
-  >
-    <div class="card w-96 mx-auto bg-white shadow-xl" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-      <figure class="px-10 pt-10">
-        <img src="./images/success.png" alt="Success" class="rounded-xl" />
-      </figure>
-      <div class="card-body items-center text-center">
-        <h2 class="card-title text-green-600">Success</h2>
-        <p class="text-lg font-medium text-[#4A4A4A]">
-          Thank you for Choosing us. <br />
-          We are working hard to find the best service and deals for you.
-          <span class="font-light block">
-            Shortly you will find a confirmation in your email.
-          </span>
-        </p>
-        <div class="card-actions">
-          <button class="btn rounded-3xl px-8 bg-lime-500">Continue</button>
+      <section
+        id="congrats"
+        class="h-screen w-screen bg-[#F2F1F1] font-roboto fixed top-0 hidden"
+      >
+        <div
+          class="card w-96 mx-auto bg-white shadow-xl"
+          style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+        >
+          <figure class="px-10 pt-10">
+            <img src="./images/success.png" alt="Success" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-green-600">Success</h2>
+            <p class="text-lg font-medium text-[#4A4A4A]">
+              Thank you for Choosing us. <br />
+              We are working hard to find the best service and deals for you.
+              <span class="font-light block">
+                Shortly you will find a confirmation in your email.
+              </span>
+            </p>
+            <div class="card-actions">
+              <button class="btn rounded-3xl px-8 bg-lime-500">Continue</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
     </main>
 
     <footer class="bg-slate-950">

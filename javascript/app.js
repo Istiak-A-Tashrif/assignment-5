@@ -65,17 +65,15 @@ coupon.addEventListener("keyup", function () {
 
 const confirmButton = document.getElementById("confirm-button");
 confirmButton.addEventListener("click", function (e) {
-    const name = document.getElementById('name').value.trim();
-    const number = document.getElementById('number').value.trim();
+  const name = document.getElementById("name").value.trim();
+  const number = document.getElementById("number").value.trim();
 
-    if (name && number) {
-        document.getElementById("congrats").classList.remove("hidden");
-    }
-    else {
-        alert('Please fill up the form')
-    }
-    e.preventDefault();
-   
+  if (name && number) {
+    document.getElementById("congrats").classList.remove("hidden");
+  } else {
+    alert("Please fill up the form");
+  }
+  e.preventDefault();
 });
 
 function setInnerText(id, text) {
