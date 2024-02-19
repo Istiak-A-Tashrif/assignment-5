@@ -34,6 +34,13 @@
       .selected {
         pointer-events: none;
       }
+
+      @media screen and (max-width: 374px) {
+        .responsive {
+          position: relative;
+          right: 44px;
+        }
+      }
     </style>
   </head>
   <body class="font-raleway">
@@ -117,7 +124,8 @@
               ),
               url(./images/banner.png), lightgray 50%;
             background-repeat: no-repeat;
-            background-size: cover; object-fit: cover;
+            background-size: cover;
+            object-fit: cover;
           "
           class="h-[300px] lg:h-[600px] rounded-[32px]"
         >
@@ -180,7 +188,9 @@
           </div>
         </div>
         <!-- statistics cards -->
-        <div class="flex flex-col items-center justify-center md:hidden lg:hidden space-y-6">
+        <div
+          class="flex flex-col items-center justify-center md:hidden lg:hidden space-y-6"
+        >
           <!-- 1st card -->
           <div
             class="card card-side w-fit px-4 bg-base-100 border-b-2 border-lime-500"
@@ -591,7 +601,7 @@
                 <!-- coupon input -->
                 <label
                   id="coupon-input"
-                  class="input input-bordere flex items-center gap-2 lg:w-4/5 mx-auto lg:mr-10 my-6"
+                  class="input input-bordere flex items-center gap-2 my-6"
                 >
                   <input
                     type="text"
@@ -601,14 +611,13 @@
                   />
                   <button
                     disabled
-                    class="btn relative lg:static right-11 bg-lime-500 min-h-8 h-8"
+                    class="btn bg-lime-500 min-h-8 h-8 responsive"
                   >
                     Apply
                   </button>
                 </label>
-
                 <!-- grand total -->
-                <div class="overflow-x-auto">
+                <div class="">
                   <table class="table font-inter">
                     <thead>
                       <tr class="space-x-4">
@@ -679,6 +688,7 @@
               </div>
             </div>
 
+            <!-- condition anchor tag -->
             <div class="space-x-5 flex justify-center my-8">
               <a class="underline text-blue-300" href=""
                 >Terms and Conditions</a
@@ -690,33 +700,34 @@
       </section>
 
       <!-- congrats sec -->
-      <section
-        id="congrats"
-        class="h-screen w-screen bg-[#F2F1F1] font-roboto fixed top-0 hidden"
-      >
+      <section id="congrats" class="hidden">
         <div
-          class="card w-96 mx-auto bg-white shadow-xl"
-          style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          "
+          class="bg-[#F2F1F1] font-roboto h-screen flex flex-col justify-center items-center"
         >
-          <figure class="px-10 pt-10">
-            <img src="./images/success.png" alt="Success" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-green-600">Success</h2>
-            <p class="text-lg font-medium text-[#4A4A4A]">
-              Thank you for Choosing us. <br />
-              We are working hard to find the best service and deals for you.
-              <span class="font-light block">
-                Shortly you will find a confirmation in your email.
-              </span>
-            </p>
-            <div class="card-actions" onclick="window.location.reload()">
-              <button class="btn rounded-3xl px-8 bg-lime-500">Continue</button>
+          <div
+            class="flex flex-col justify-center items-center bg-white p-6 rounded-2xl"
+          >
+            <figure class="mb-5">
+              <img
+                src="./images/success.png"
+                alt="Success"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="flex flex-col justify-center items-center space-y-2">
+              <h2 class="text-2xl font-medium text-green-600">Success</h2>
+              <p class="text-center text-lg font-medium text-[#4A4A4A]">
+                Thank you for Choosing us. <br />
+                We are working hard to find the best service and deals for you.
+                <span class="font-light block">
+                  Shortly you will find a confirmation in your email.
+                </span>
+              </p>
+              <div class="" onclick="window.location.reload()">
+                <button class="btn rounded-3xl px-8 bg-lime-500">
+                  Continue
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -724,39 +735,46 @@
     </main>
 
     <footer class="bg-slate-950">
-      <div
-        class="footer justify-between p-10 text-neutral-content border-b border-dashed border-[#FFFFFF4D] pb-10"
-      >
-        <aside>
-          <p class="text-white">
-            PH-Ticket<br /><span class="text-[#FFFFFFCC]"
-              >Providing reliable travel service since 1999</span
-            >
-          </p>
-        </aside>
-        <nav>
-          <h6 class="text-base text-white">Download our app</h6>
-          <div class="grid grid-flow-col gap-4">
-            <a href=""><img src="./images/playstore.png" alt="" /></a>
-            <div>
-              <p class="text-white text-xs">GET IT ON</p>
-              <p class="text-base text-white font-bold">GOOGLE PLAY</p>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="footer items-center p-6 text-neutral-content">
-        <aside class="items-center grid-flow-col">
-          <p>Copyright © 2024 - All right reserved by PH-Travel</p>
-        </aside>
-        <nav
-          class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+      <!-- app link -->
+      <section>
+        <div
+          class="footer justify-between p-10 text-neutral-content border-b border-dashed border-[#FFFFFF4D] pb-10"
         >
-          <a>Terms & Conditions</a>
-          <a>Refund Policy</a>
-          <a>Privacy Policy</a>
-        </nav>
-      </div>
+          <aside>
+            <p class="text-white">
+              PH-Ticket<br /><span class="text-[#FFFFFFCC]"
+                >Providing reliable travel service since 1999</span
+              >
+            </p>
+          </aside>
+          <nav>
+            <h6 class="text-base text-white">Download our app</h6>
+            <div class="grid grid-flow-col gap-4">
+              <a href=""><img src="./images/playstore.png" alt="" /></a>
+              <div>
+                <p class="text-white text-xs">GET IT ON</p>
+                <p class="text-base text-white font-bold">GOOGLE PLAY</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- navigation -->
+      <section>
+        <div class="footer items-center p-6 text-neutral-content">
+          <aside class="items-center grid-flow-col">
+            <p>Copyright © 2024 - All right reserved by PH-Travel</p>
+          </aside>
+          <nav
+            class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+          >
+            <a>Terms & Conditions</a>
+            <a>Refund Policy</a>
+            <a>Privacy Policy</a>
+          </nav>
+        </div>
+      </section>
     </footer>
 
     <script>

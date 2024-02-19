@@ -40,6 +40,11 @@ for (const seat of seats) {
 const coupon = document.getElementById("coupon");
 coupon.addEventListener("keyup", function () {
   const applyButton = coupon.nextElementSibling;
+  applyButton.addEventListener("click", function () {
+    for (const seat of seats) {
+      seat.setAttribute('disabled', true)
+    }
+  });
   
   const total = getInnerText("total");
   convertedTotal = parseInt(total);
@@ -74,6 +79,7 @@ coupon.addEventListener("keyup", function () {
     } else if (coupon.value === "COUPLE 20") {
       applyButton.removeAttribute("disabled");
       applyButton.addEventListener("click", function () {
+
         const discount = convertedTotal * 0.20;
         const grandTotal = convertedTotal - discount;
         setInnerText("grand-total", Math.round(grandTotal));
@@ -96,6 +102,7 @@ coupon.addEventListener("keyup", function () {
         tr.appendChild(td3);
   
         table.appendChild(tr);
+        
       });
     } else {
       applyButton.setAttribute("disabled", true);
@@ -115,7 +122,10 @@ confirmButton.addEventListener("click", function (e) {
 
   if (seatCount>0) {
     if (name && number) {
-      document.getElementById("congrats").classList.remove("hidden");
+      const sections =document.getElementsByTagName("section");
+      for (const section of sections) {
+        section.classList.toggle("hidden");
+      }
     } 
     else {
       alert("Please fill up the form");
