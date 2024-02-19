@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH Travel</title>
-    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/bus-icon.png"
+      type="image/x-icon"
+    />
 
     <!-- tailwind and daisyUI CDN -->
     <link
@@ -13,11 +17,10 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- font import -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
       .font-roboto {
         font-family: "Roboto", sans-serif;
@@ -28,69 +31,79 @@
       .font-raleway {
         font-family: "Raleway", sans-serif;
       }
+      .selected {  
+        pointer-events: none; }
     </style>
   </head>
   <body class="font-raleway">
     <header>
       <!-- navbar -->
       <section class="container mx-auto">
-       <nav>
-        <div class="navbar bg-base-100">
-          <div class="navbar-start w-1/3 lg:w-1/2">
-            <!-- title -->
-            <div>
-              <h3 class="text-4xl font-extrabold hidden lg:block">PH-Travel</h3>
-            </div>
-            <!-- dropdown-menu -->
-            <div class="dropdown lg:hidden">
-              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h7"
-                  />
-                </svg>
+        <nav>
+          <div class="navbar bg-base-100">
+            <div class="navbar-start w-1/3 lg:w-1/2">
+              <!-- title -->
+              <div>
+                <h3 class="text-4xl font-extrabold hidden lg:block">
+                  PH-Travel
+                </h3>
               </div>
+              <!-- dropdown-menu -->
+              <div class="dropdown lg:hidden">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn btn-ghost btn-circle"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-center">
               <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                class="hidden lg:flex space-x-10 text-[#030712b3] font-medium"
               >
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Destination</a></li>
                 <li><a>Search</a></li>
               </ul>
+              <h3 class="text-xl font-extrabold block lg:hidden">PH-Travel</h3>
+            </div>
+            <div class="navbar-end">
+              <button
+                class="btn h-8 min-h-8 lg:h-[3rem] lg:max-h-[3rem] bg-[#1DD1001A] text-[#1DD100] lg:text-xl px-2 lg:px-4"
+              >
+                Bus <img src="./images/bus-icon.png" alt="bus-icon" />
+              </button>
             </div>
           </div>
-          <div class="navbar-center">
-            <ul class="hidden lg:flex space-x-10 text-[#030712b3] font-medium">
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Destination</a></li>
-              <li><a>Search</a></li>
-            </ul>
-            <h3 class="text-xl font-extrabold block lg:hidden">PH-Travel</h3>
-          </div>
-          <div class="navbar-end">
-            <button
-              class="btn h-8 min-h-8 lg:h-[3rem] lg:max-h-[3rem] bg-[#1DD1001A] text-[#1DD100] lg:text-xl px-2 lg:px-4"
-            >
-              Bus <img src="./images/bus-icon.png" alt="bus-icon" />
-            </button>
-          </div>
-        </div>
-       </nav>
+        </nav>
       </section>
-    </header>  
-      
+    </header>
+
     <main>
       <!-- banner -->
       <section class="container mx-auto my-6">
@@ -121,12 +134,12 @@
               >we have AC and Chair-Coach both. You will like us</span
             >
           </p>
-          <a href="#ticket-info" id="scroll-btn" >
+          <a href="#ticket-info" id="scroll-btn">
             <button
-            class="block btn h-10 min-h-10 lg:h-[3rem] lg:max-h-[3rem] bg-lime-500 mx-auto"
-          >
-            Buy Tickets
-          </button>
+              class="block btn h-10 min-h-10 lg:h-[3rem] lg:max-h-[3rem] bg-lime-500 mx-auto"
+            >
+              Buy Tickets
+            </button>
           </a>
 
           <!-- statistics cards -->
@@ -294,15 +307,17 @@
               <p
                 class="h-12 flex items-center px-5 my-5 bg-amber-100 font-inter font-medium text-[#1DD100]"
               >
-                <img src="./images/seat-green.png" alt="" /><span class="ml-2"
+                <img src="./images/seat-green.png" alt="" /><span
+                  id="seats-left"
+                  class="ml-2"
                   >40</span
                 >
-                seats left
+                &nbsp;seats left
               </p>
             </div>
 
             <!-- transit info -->
-            <div class="bg-[#F7F8F8] rounded-t-xl p-4 mt-4 ">
+            <div class="bg-[#F7F8F8] rounded-t-xl p-4 mt-4">
               <div class="flex justify-between border-b border-dashed my-6">
                 <p class="font-semibold text-[#03071299]">Route</p>
                 <p class="font-semibold text-[#03071299]">Dhaka - Sylhet</p>
@@ -311,7 +326,9 @@
                 <p class="font-semibold text-[#03071299]">Departure Time</p>
                 <p class="font-semibold text-[#03071299]">9.00 PM</p>
               </div>
-              <div class="block lg:flex justify-between my-6 space-y-4 lg:space-y-0 text-center">
+              <div
+                class="block lg:flex justify-between my-6 space-y-4 lg:space-y-0 text-center"
+              >
                 <button
                   class="btn bg-[#0307120D] font-medium font-inter text-[#030712CC]"
                 >
@@ -371,146 +388,165 @@
 
             <!-- steering block disabled -->
             <div class="flex justify-end">
-              <button disabled class="btn w-28">
+              <button disabled class="btn converted w-28">
                 <img src="./images/steering.png" alt="" />
               </button>
             </div>
 
             <!-- A block -->
-            <div class="font-inter flex justify-between  items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>A</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">A1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">A2</button>
+                <button class="btn w-28 bg-#F7F8F8 seat-button">A1</button>
+                <button class="btn w-28 bg-#F7F8F8 seat-button">A2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">A3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">A4</button>
+                <button class="btn w-28 bg-#F7F8F8 seat-button">A3</button>
+                <button class="btn w-28 bg-#F7F8F8 seat-button">A4</button>
               </div>
             </div>
 
             <!-- B block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>B</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">B1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">B2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">B1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">B2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">B3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">44</button>
+                <button class="btn w-28 #F7F8F8 seat-button">B3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">44</button>
               </div>
             </div>
 
             <!-- C block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>C</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">C1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">C2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">C1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">C2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">C3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">C4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">C3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">C4</button>
               </div>
             </div>
 
             <!-- D block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>D</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">D1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">D2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">D1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">D2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">D3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">D4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">D3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">D4</button>
               </div>
             </div>
 
             <!-- E block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>E</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">E1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">E2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">E1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">E2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">E3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">E4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">E3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">E4</button>
               </div>
             </div>
 
             <!-- F block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>F</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">F1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">F2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">F1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">F2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">F3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">F4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">F3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">F4</button>
               </div>
             </div>
 
             <!-- G block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>G</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">G1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">G2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">G1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">G2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">G3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">G4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">G3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">G4</button>
               </div>
             </div>
 
             <!-- H block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>H</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">H1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">H2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">H1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">H2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">H3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">H4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">H3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">H4</button>
               </div>
             </div>
 
             <!-- I block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>I</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">I1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">I2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">I1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">I2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">I3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">I4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">I3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">I4</button>
               </div>
             </div>
 
             <!-- J block -->
-            <div class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8">
+            <div
+              class="font-inter flex justify-between items-center overflow-x-auto gap-4 lg:gap-8"
+            >
               <div class="flex items-center gap-2 lg:gap-5">
                 <p>J</p>
-                <button class="btn bg- w-28 bg-#F7F8F8">J1</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">J2</button>
+                <button class="btn w-28 #F7F8F8 seat-button">J1</button>
+                <button class="btn w-28 #F7F8F8 seat-button">J2</button>
               </div>
               <div class="flex gap-2 lg:gap-5">
-                <button class="btn bg- w-28 bg-#F7F8F8">J3</button>
-                <button class="btn bg- w-28 bg-#F7F8F8">J4</button>
+                <button class="btn w-28 #F7F8F8 seat-button">J3</button>
+                <button class="btn w-28 #F7F8F8 seat-button">J4</button>
               </div>
             </div>
           </div>
 
           <!-- form and pricing table -->
-          <div class=" w-full">
-            <div class="mt-9 lg:mt-0
-            ">
+          <div class="w-full">
+            <div class="mt-9 lg:mt-0">
               <p
                 class="font-bold text-lg lg:text-xl border-b-2 border-dashed pb-6"
               >
@@ -520,50 +556,60 @@
 
             <!-- table -->
             <div class="my-6 bg-[#F7F8F8] p-6 rounded-xl">
-
               <!-- selected table -->
               <div class="overflow-x-auto">
-                <table class="table">
+                <table class="table font-inter">
                   <!-- head -->
                   <thead class="border-b-2">
                     <tr>
                       <th class="font-medium text-black text-base">
-                        Seat <span class="bg-lime-500 text-white px-1">0</span>
+                        Seat
+                        <span
+                          id="seat-count"
+                          class="bg-lime-500 text-white px-1"
+                          >0</span
+                        >
                       </th>
                       <th class="font-medium text-black text-base">Class</th>
                       <th class="font-medium text-black text-base">Price</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="pricing-table">
+
+                  </tbody>
 
                   <tfoot class="border-t-2">
                     <tr>
-                      <th class="font-medium text-black text-base">
-                        Total
-                      </th>
-                      <th class="font-medium text-black text-base"></th>
-                      <th class="font-medium text-black text-base">
-                        BDT <span>0</span>
-                      </th>
+                      <td class="font-medium text-black text-base">Total</td>
+                      <td class="font-medium text-black text-base"></td>
+                      <td class="font-medium text-black text-base">
+                        BDT <span id="total">0</span>
+                      </td>
                     </tr>
                   </tfoot>
                 </table>
 
                 <!-- coupon input -->
-                <label
-                  class="input input-bordere flex items-center gap-2  lg:w-4/5 mx-auto lg:mr-10 my-6"
+                <label id="coupon-input"
+                  class="input input-bordere flex items-center gap-2 lg:w-4/5 mx-auto lg:mr-10 my-6"
                 >
                   <input
                     type="text"
                     class="grow"
+                    id="coupon"
                     placeholder="Have any coupon?"
                   />
-                  <button disabled class="btn relative lg:inline right-11 bg-lime-500 min-h-8 h-8 ">Apply</button>
+                  <button
+                    disabled
+                    class="btn relative lg:inline right-11 bg-lime-500 min-h-8 h-8"
+                  >
+                    Apply
+                  </button>
                 </label>
 
                 <!-- grand total -->
                 <div class="overflow-x-auto">
-                  <table class="table">
+                  <table class="table font-inter">
                     <thead>
                       <tr>
                         <th class="font-medium text-black text-base">
@@ -571,7 +617,7 @@
                         </th>
                         <th></th>
                         <th class="font-medium text-black text-base">
-                          BDT <span>0</span>
+                          BDT <span id="grand-total">0</span>
                         </th>
                       </tr>
                     </thead>
@@ -581,35 +627,59 @@
             </div>
 
             <!-- form -->
-              <div class="flex justify-center">
-                <div class="card shrink-0 w-full max-w-sm">
-                  <form class="card-body">
-                    <div class="form-control">
-                      <label class="label">
-                        <span class="font-inter font-semibold text-black">Passenger's Name*</span>
-                      </label>
-                      <input type="text" placeholder="Enter Your Name" class="input input-bordered" required />
-                    </div>
-                    <div class="form-control">
-                      <label class="label">
-                        <span class="font-inter font-semibold text-black">Phone Number*</span>
-                      </label>
-                      <input type="tel" placeholder="Enter Your Phone Number" class="input input-bordered" required />
-                      <label class="label">
-                        <span class="font-inter font-semibold text-black ">Email ID</span>
-                      </label>
-                      <input type="email" placeholder="Enter Your Email" class="input input-bordered" />
-                    </div>
-                    <div class="form-control mt-6">
-                      <button class="btn bg-lime-500 text-white">Next</button>
-                    </div>
-                  </form>
-                </div>
+            <div class="flex justify-center">
+              <div class="card shrink-0 w-full max-w-sm">
+                <form class="">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="font-inter font-semibold text-black"
+                        >Passenger's Name*</span
+                      >
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Your Name" id="name"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="font-inter font-semibold text-black"
+                        >Phone Number*</span
+                      >
+                    </label>
+                    <input
+                      type="number"
+                      placeholder="Enter Your Phone Number"
+                      class="input input-bordered"
+                      id="number"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="font-inter font-semibold text-black"
+                        >Email ID</span
+                      >
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter Your Email"
+                      class="input input-bordered"
+                    />
+                  </div>
+                  <div id="confirm-button" class="form-control mt-6">
+                    <button class="btn bg-lime-500 text-white">Next</button>
+                  </div>
+                </form>
               </div>
-            
+            </div>
 
             <div class="space-x-5 flex justify-center my-8">
-              <a class="underline text-blue-300" href="">Terms and Conditions</a>
+              <a class="underline text-blue-300" href=""
+                >Terms and Conditions</a
+              >
               <a class="underline text-blue-300" href="">Cancellation Policy</a>
             </div>
           </div>
@@ -617,39 +687,48 @@
       </section>
 
       <!-- congrats sec -->
-      <section class="h-screen w-screen flex justify-center items-center bg-[#F2F1F1] font-roboto hidden">
-        <div class="card w-96 bg-white shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src="./images/success.png" alt="Success" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-green-600">Success</h2>
-            <p class="text-lg font-medium text-[#4A4A4A] ">Thank you for Choosing us. <br> 
-              We are working hard to find the best service and deals for you. 
-              <span class="font-light block">
-                Shortly you will find a confirmation in your email. 
-              </span>
-            </p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
+    <section id="congrats"
+    class="h-screen w-screen bg-[#F2F1F1] font-roboto fixed top-0 hidden"
+  >
+    <div class="card w-96 mx-auto bg-white shadow-xl" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <figure class="px-10 pt-10">
+        <img src="./images/success.png" alt="Success" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-green-600">Success</h2>
+        <p class="text-lg font-medium text-[#4A4A4A]">
+          Thank you for Choosing us. <br />
+          We are working hard to find the best service and deals for you.
+          <span class="font-light block">
+            Shortly you will find a confirmation in your email.
+          </span>
+        </p>
+        <div class="card-actions">
+          <button class="btn btn-primary">Buy Now</button>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
     </main>
 
     <footer class="bg-slate-950">
-      <div class="footer justify-between p-10 text-neutral-content border-b border-dashed border-[#FFFFFF4D] pb-10">
+      <div
+        class="footer justify-between p-10 text-neutral-content border-b border-dashed border-[#FFFFFF4D] pb-10"
+      >
         <aside>
-          <p class="text-white">PH-Ticket<br><span class="text-[#FFFFFFCC]">Providing reliable travel service since 1999</span></p>
-        </aside> 
+          <p class="text-white">
+            PH-Ticket<br /><span class="text-[#FFFFFFCC]"
+              >Providing reliable travel service since 1999</span
+            >
+          </p>
+        </aside>
         <nav>
-          <h6 class="text-base text-white">Download our app</h6> 
+          <h6 class="text-base text-white">Download our app</h6>
           <div class="grid grid-flow-col gap-4">
-            <a href=""><img src="./images/playstore.png" alt=""></a>
+            <a href=""><img src="./images/playstore.png" alt="" /></a>
             <div>
               <p class="text-white text-xs">GET IT ON</p>
-              <p class="text-base text-white font-bold"> GOOGLE PLAY</p>
+              <p class="text-base text-white font-bold">GOOGLE PLAY</p>
             </div>
           </div>
         </nav>
@@ -657,8 +736,10 @@
       <div class="footer items-center p-6 text-neutral-content">
         <aside class="items-center grid-flow-col">
           <p>Copyright © 2024 - All right reserved by PH-Travel</p>
-        </aside> 
-        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        </aside>
+        <nav
+          class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+        >
           <a>Terms & Conditions</a>
           <a>Refund Policy</a>
           <a>Privacy Policy</a>
@@ -667,16 +748,20 @@
     </footer>
 
     <script>
-      document.getElementById('scroll-btn').addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        const topPos = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        
-        setTimeout(() => {
-          window.scrollTo({ top: topPos, behavior: 'smooth' });
-        }, 100);
-      });
-      </script>
+      document
+        .getElementById("scroll-btn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          const topPos =
+            targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+          setTimeout(() => {
+            window.scrollTo({ top: topPos, behavior: "smooth" });
+          }, 100);
+        });
+    </script>
+    <script src="./javascript/app.js"></script>
   </body>
 </html>
