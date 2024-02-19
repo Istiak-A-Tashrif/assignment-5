@@ -32,6 +32,7 @@ for (const seat of seats) {
       table.appendChild(tr);
 
       setInnerText("total", 550 * seatCount);
+      setInnerText("grand-total", 550 * seatCount);
     } else alert("You can buy 4 tickets at a time");
   });
 }
